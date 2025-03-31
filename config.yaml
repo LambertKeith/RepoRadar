@@ -1,0 +1,53 @@
+# RepoRadar Configuration
+
+# Data Collection Settings
+collector:
+  update_interval: 6  # Hours between updates
+  languages:
+    - ""              # All languages
+    - "python"
+    - "javascript"
+    - "typescript"
+    - "go"
+    - "rust"
+    - "java"
+    - "c++"
+    - "c#"
+  time_periods:
+    - "daily"
+    - "weekly"
+    - "monthly"
+  max_repos_per_language: 25
+
+# Model Settings
+vectorizer:
+  models:
+    small:
+      name: "all-MiniLM-L6-v2"
+      dim: 384
+      onnx_path: "./models/all-MiniLM-L6-v2-onnx/"
+    medium:
+      name: "paraphrase-multilingual-MiniLM-L12-v2"
+      dim: 384
+      onnx_path: null
+    large:
+      name: "all-mpnet-base-v2"
+      dim: 768
+      onnx_path: null
+
+# Storage Settings
+storage:
+  data_dir: "./data/vector_db"
+  memory_threshold: 10000  # Items above which to use persistent storage
+  backup_dir: "./backups"
+
+# Interface Settings
+interface:
+  host: "127.0.0.1"
+  port: 7860
+  open_browser: true
+  theme: "soft"  # Gradio theme
+
+# API Configuration
+api:
+  glm_flash_key: "1579ecae63f81f1f64c186f91cbd50cb.bC6OyvDrlSvI4Ffz"  # 请在此处填写您的 API 密钥 

@@ -1,0 +1,17 @@
+#torch>=2.0.0
+sentence-transformers>=2.2.0
+chromadb>=0.4.0
+gradio>=3.0
+pyyaml>=6.0
+beautifulsoup4>=4.9.0
+requests>=2.25.0
+numpy>=1.20.0
+# Development tools
+watchdog>=2.1.0
+# Optional GPU acceleration
+# If you have a compatible NVIDIA GPU, uncomment the line below
+# cuda-python
+# For ONNX optimization (CPU)
+onnx>=1.12.0
+onnxruntime>=1.12.0
+optimum>=1.8.0 
